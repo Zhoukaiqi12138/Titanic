@@ -12,13 +12,13 @@ st.title('Titanic App by Kaiqi Zhou')
 df=pd.read_csv('train.csv')
 
 
+# Create a figure for the first subplot: Box plot of ticket prices by class
 plt.figure(figsize=(10, 5))
 sns.boxplot(data=df, x='Pclass', y='Fare')
 plt.title('Ticket Price by Class')
 plt.xlabel('Class')
 plt.ylabel('Ticket Price')
 
-
-# Display the plot in Streamlit
-st.pyplot(fig)
+# Display the figure in Streamlit
+st.pyplot(plt)
 
