@@ -11,6 +11,9 @@ st.title('Titanic App by Kaiqi Zhou')
 # read csv and show the dataframe
 df=pd.read_csv('train.csv')
 
+st.subheader('Titanic Dataset')
+st.dataframe(df)
+
 fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 sns.boxplot(data=df[df['Pclass'] == 1], x='Pclass', y='Fare', ax=axes[0])
 axes[0].set_title('Ticket Price for 1st Class')
